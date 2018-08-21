@@ -13,7 +13,7 @@ import java.util.Arrays;
 public class InsertionSort {
     public static void main(String[] args) {
         int[] a = {7, 10, 3, 5, 4, 6, 2, 8, 1, 9};
-        insert(a);
+        insertTwo(a);
         System.out.println(Arrays.toString(a));
     }
 
@@ -28,6 +28,17 @@ public class InsertionSort {
                 pre--;
             }
             a[pre + 1] = current;
+        }
+    }
+
+    public static void insertTwo(int[] a) {
+        int length = a.length;
+        for (int i = 1; i < length; i++) {
+            int num = a[i];
+            int j = i - 1;
+            for (; j >= 0 && a[j] > num; j--)
+                a[j + 1] = a[j];
+            a[j + 1] = num;
         }
     }
 }
