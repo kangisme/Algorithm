@@ -15,7 +15,8 @@ public class HeapSort {
     //堆排序函数
     public static void HeapSort(int[] arr) {
         int n = arr.length - 1;
-        for (int i = (n - 1) / 2; i >= 0; i--) {
+        // 非叶子节点
+        for (int i = n / 2 - 1; i >= 0; i--) {
             //构造大顶堆，从下往上构造
             //i为最后一个根节点，n为数组最后一个元素的下标
             HeapAdjust(arr, i, n);

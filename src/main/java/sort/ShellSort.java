@@ -24,9 +24,8 @@ public class ShellSort {
             for (int i = gap; i < length; i += gap) {
                 int pre = i - gap;
                 int current = a[i];
-                while (pre >= 0 && a[pre] > current) {
+                for (;pre >= 0 && a[pre] > current; pre -= gap) {
                     a[pre + gap] = a[pre];
-                    pre -= gap;
                 }
                 a[pre + gap] = current;
             }
