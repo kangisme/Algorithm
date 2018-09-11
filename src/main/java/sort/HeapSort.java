@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class HeapSort {
     public static void main(String[] args) {
         //定义整型数组
-        int a[] = {51, 46, 20, 18, 65, 97, 82, 30, 77, 50, 1000};
+        int a[] = {51, 46, 20, 18, 65, 97, 82, 30, 77, 50, 100, 1000};
         //调用堆排序数组
         HeapSort(a);
         //输出排序后的数组
@@ -16,7 +16,7 @@ public class HeapSort {
     public static void HeapSort(int[] arr) {
         int n = arr.length - 1;
         // 非叶子节点
-        for (int i = n / 2 - 1; i >= 0; i--) {
+        for (int i = (n - 1) / 2; i >= 0; i--) {
             //构造大顶堆，从下往上构造
             //i为最后一个根节点，n为数组最后一个元素的下标
             HeapAdjust(arr, i, n);
